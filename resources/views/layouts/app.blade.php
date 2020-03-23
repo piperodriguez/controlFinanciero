@@ -7,17 +7,34 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
+    <title>{{ config('app.name', 'Control Financiero') }}</title>
+<!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/librerias/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/librerias/jquery-ui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/librerias/webfonts/fontawesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/librerias/toastr.css') }}">
+
+    <script type="text/javascript" src="{{ asset('js/librerias/jquery-3.4.1.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/librerias/popper.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/librerias/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/librerias/jquery-ui.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/librerias/jquery.validate.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/librerias/datatables.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/librerias/toastr.min.js') }}"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            font-family: 'Hind Siliguri', sans-serif !important;
+        }
+    </style>
+
 </head>
 <body>
     <div id="app">
