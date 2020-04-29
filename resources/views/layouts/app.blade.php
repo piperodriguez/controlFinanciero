@@ -26,7 +26,7 @@
     <script type="text/javascript" src="{{ asset('js/librerias/jquery.validate.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/librerias/datatables.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/librerias/toastr.min.js') }}"></script>
-
+    <script type="text/javascript" src="{{ asset('js/formulario.js') }}"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
     <style type="text/css">
@@ -49,9 +49,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
 
-                    </ul>
+                    @auth
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('ingresos.index') }}">Ingresos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('pagos.index') }}">Egresos</a>
+                            </li>
+                        </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

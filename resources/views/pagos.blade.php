@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1 align="center">Lista de Pagos <i class="fas fa-users"></i></h1>
+    <h1 align="center">Lista de Egresos <i class="fas fa-users"></i></h1>
     <a class="btn btn-dark" href="javascript:void(0)" id="createNewProduct"> <i class="fas fa-user-plus"></i></a>
     <table class="table table-bordered data-table">
         <thead>
@@ -85,7 +85,7 @@
     $('body').on('click', '.editUsuario', function () {
       var user_id = $(this).data('id');
       $.get("{{ route('pagos.index') }}" +'/' + user_id +'/edit', function (data) {
-          $('#modelHeading').html("Edit Product");
+          $('#modelHeading').html("Edit Pago");
           $('#saveBtn').val("edit-user");
           $('#ajaxModel').modal('show');
           $('#pago_id').val(data.id);
@@ -95,6 +95,7 @@
    });
 
     $('#saveBtn').click(function (e) {
+
         e.preventDefault();
         $(this).html('Sending..');
 

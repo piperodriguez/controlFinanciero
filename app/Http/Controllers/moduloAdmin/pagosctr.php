@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\moduloAdminGastos;
+namespace App\Http\Controllers\moduloAdmin;
 
 use App\Modelos\Pagos;
 use App\Http\Controllers\Controller;
@@ -62,10 +62,7 @@ class pagosctr extends Controller
      */
     public function store(Request $request)
     {
-        $pagoId = $request->id;
-
-
-
+        $pagoId = $request->pago_id;
         $pago   =   Pagos::updateOrCreate(['id' => $pagoId],
                             [
                                 'user_id' => $request->user_id,

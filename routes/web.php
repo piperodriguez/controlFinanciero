@@ -23,4 +23,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::resource('pagos', 'moduloAdminGastos\pagosctr');
+Route::resource('pagos', 'moduloAdmin\pagosctr');
+
+Route::resource('ingresos', 'moduloAdmin\ingresosctr');
+
+
+// Rutas asignadas para la creaci�n Del formulario d�namico
+
+Route::post('/data/{nomprograma}/new', 'comunes\FormularioController@crearFormulario')->name('formulario.new');
+Route::get('/formulario', 'comunes\FormularioController@index')->name('vista_formulario');
+Route::post('/selectdata', 'comunes\FormularioController@getSelect')->name('consulta.select');
+Route::post('/formulario', 'comunes\FormularioController@save')->name('formulario.save');
+
+
+Route::post('/data/edit', 'comunes\FormularioController@edit')->name('formulario.edit');
+Route::put('/data/{id}/update', 'comunes\FormularioController@update')->name('formulario.update');
